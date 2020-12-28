@@ -1,0 +1,29 @@
+.nacin-izrade_wrapper {
+    width: 90%;
+    padding: 5% 5%; 
+    margin-top: 100px;
+    margin-bottom: 100px;
+    background-color: $white-color;   
+    @import "../elements/sub-heading";
+    .text-container {
+        p {
+            font-size: 1rem;
+            letter-spacing: 0.05rem;
+            color: $text-color;
+            margin: 4% 0;
+            .mark {
+                color: $brown-color;
+                text-decoration: underline $brown-color;
+                font-weight: 600;
+            }
+        }
+
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .nacin-izrade_wrapper {
+        width: 60%;
+        @import "../elements/sub-heading";
+    }
+}

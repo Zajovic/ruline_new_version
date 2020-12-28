@@ -1,0 +1,28 @@
+.seeMoreButton {
+  height: 40px;
+  width: 90%;
+  border: none;
+  box-shadow: none;
+  font-size: 1rem;
+  background-color: #8f5e37;
+  border-radius: 3px;
+  color: #f1f1f1;
+  display: block;
+  margin: 15px auto auto auto;
+}
+.seeMoreButton:active {
+  border: none;
+  box-shadow: none;
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1024) {
+  .seeMoreButton {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .seeMoreButton {
+    display: none;
+  }
+}

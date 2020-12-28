@@ -1,0 +1,95 @@
+.contact-form {
+    @include flex-column;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 1px;
+    h2 {
+        color: $brown-color;
+        font-size: 1.3rem;
+        margin: 5% auto;
+        font-weight: 500;
+    }
+    .form-wrapper {
+        width: 100%;
+        height: auto;
+        padding: 2%;
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            height: auto;
+            input  {
+                line-height: 1.2rem;
+                font-size: 0.9rem;
+                width: 90%;
+                background-color: $light-color;
+                padding: 7px 5px;
+                margin: 2% 0;
+                border: none;
+                box-shadow: none;
+                border-radius: 2px;
+                &::placeholder{
+                    color: $gray;
+                }
+                &::before {
+                    content: "Ime i Prezime:";
+                    color: red;             // fix it
+                }
+                &:focus {
+                    border: 1px solid $brown-color;
+                }
+            }
+            textarea {
+                resize: none;
+                border: none;
+                width: 100%;
+                background-color:$light-color;
+                margin: 2% 0;
+                padding: 6px;
+                &:before {
+                    content: "Vaša Poruka:";
+                    color: $blue;       //  fix
+                }
+                &::placeholder {
+                    color: $gray;
+                }   
+            }
+            button {
+                align-self: flex-end;
+                padding: 2% 5%;
+                border: none;
+                box-shadow: none;
+                background-color:$transparent-grey;
+                color:$brown-color;
+                text-decoration: $blue underline;
+                font-size: 1rem;
+                letter-spacing: 0.1rem;
+                font-weight: 500;
+                cursor: pointer;
+                margin: 3% 20px;
+                border-radius: 2px;
+            }
+            button:active, 
+            button:hover {
+                color: $white-color;
+                background-color: $transparent-grey;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .contact-form {
+        flex: 1;
+        margin-top: 0;
+        padding: 50px;
+        form {
+            .wrap-form {
+                button {
+                    padding: 6px 15px;
+                }
+            }
+        }
+    }
+}

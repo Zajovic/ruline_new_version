@@ -1,0 +1,30 @@
+
+
+.contact-container {
+    width: 90%;
+    height: auto;
+    @include shadow(2px 1px 10px 1px rgba(65, 63, 63, 0.66));
+    margin-top: 70px;
+    @import "./components/contactInfo";
+    @import "./components/contactForm";
+}
+
+@import "./components/map";
+
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
+    .contact-container {
+        @import "./components/contactInfo";
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .contact-container {
+        display: flex;
+        flex-flow: row nowrap;
+        margin-top: 100px;
+        max-width: 1300px;
+        @import "./components/contactForm";
+        @import "./components/contactInfo";
+    }
+
+}

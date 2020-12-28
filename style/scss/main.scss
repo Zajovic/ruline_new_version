@@ -1,0 +1,47 @@
+
+
+// Mixins and Variables
+@import "./basics";
+
+
+* {
+    box-sizing: border-box;
+    border-radius: 1px;
+    @include default-m-p;
+    font-family: "Varela Round", "Source Code Pro", sans-serif;
+    a {
+      cursor: pointer;
+    }
+  }
+
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  min-width: 220px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(
+    to bottom,
+    rgba(212, 212, 212, 0.3),
+    rgb(61, 61, 61)
+  );
+  .main {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    @import "./pages/onama";
+    @import "./pages/kontakt";
+    @import "./pages/nacinIzrade";
+
+  }
+  @import "./pages/components/header";
+  @import "./pages/components/nav-bar/navigator";
+  @import "./pages/components/footer";
+}

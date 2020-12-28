@@ -1,0 +1,98 @@
+.carousel-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  @include flex-row;
+  margin: 2% 0;
+  .slider {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .slide {
+      display: none;
+    }    
+    .slide.active {
+      width: 100%;
+      height: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation: fadeSlide 0.8s;
+      img {
+        max-width: 94%;
+        margin: auto;
+      }
+      .small-screen {
+        display: none;
+      }
+    }
+  }
+  .slider-nav {
+    position: absolute;
+    width: 100%;
+    @include flex-row;
+    justify-content: space-between;
+    align-self: center;
+    padding: 0 2%;
+    .arrow {
+      height: 50px;
+      width: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 2px;
+      .material-icons {
+        color: rgba(31, 30, 30, 0.9);
+        font-size: 40px;
+        font-weight: 700;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        cursor: pointer;
+      }
+    }
+    .arrow:active,
+    .arrow:hover{
+      background-color:$transparent-grey;
+      .material-icons {
+        color: $white-color;
+      }
+    }
+  }
+}
+
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
+  .carousel-container {
+    width: 100%;
+    height: auto;
+    img {
+      max-width: 650px;
+      margin: auto;
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .carousel-container {
+    width: 100%;
+    height: auto;
+    img {
+      width: 30%;
+    }
+    .small-screen {
+      display: block !important;      // fix
+    }
+  }
+}

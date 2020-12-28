@@ -1,0 +1,51 @@
+.contact-info {
+    @include flex-column;
+    justify-content: flex-start;
+    padding: 4%;
+    background-color: $white-color;
+    border-radius: 1px;
+    h4 {
+        color: $brown-color;
+        text-decoration: $blue underline;
+        font-size: 0.95rem;
+        line-height: 1.1rem;
+        font-weight: 400;
+        letter-spacing: 0.05rem;
+        margin: 15px 0;
+    }
+    p {
+        color: $gray;
+        font-size: 0.90rem;
+        line-height: 1.1rem;
+        font-weight: 400;
+        letter-spacing: 0.05rem;
+        display: block;
+        margin: 10px 0;
+        padding: 0;
+        span {
+            white-space: pre-line!important;
+        }
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
+    .contact-info {
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .contact-info {
+        flex: 1;
+        margin-top: 0;
+        padding: 50px;
+        h4 {
+            font-size: 1.05rem;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1rem;
+            margin: 15px 0;
+        }
+    }
+}
